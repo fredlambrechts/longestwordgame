@@ -1,0 +1,12 @@
+<p> ******** Welcome to the longest word-game !********</p>
+<p> Here is your grid :</p>
+<p> <%= @generate_grid %></p>
+<p> "*****************************************************"</p>
+
+<form action="/score">
+  <label for="question">Give it a go</label>
+  <input type="text" id="question" name="attempt" placeholder="What's your best shot ?">
+  <input type="hidden" id="question" name="start_time" value=<%= Time.now %> >
+  <input type="hidden" id="question" name="grid" value=<%= @generate_grid %> >
+  <input type="submit" value="Smash it!">
+</form>
